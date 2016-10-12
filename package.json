@@ -1,0 +1,66 @@
+{
+  "name": "redux-getters",
+  "version": "0.1.0",
+  "description": "a redux store enhancer for adding selectors in the store.",
+  "main": "./dist/redux-getters.js",
+  "scripts": {
+    "build": "babel src --out-dir dist --ignore '*.spec.js'",
+    "clean": "rimraf ./dist",
+    "test": "jest --coverage",
+    "test-all": "npm run -s prepublish",
+    "watch-test": "jest --watch --coverage",
+    "wtest": "npm run watch-test",
+    "prepublish": "node scripts/prepublish.js",
+    "postpublish": "echo --- PUBLISHED ---",
+    "lint": "eslint --max-warnings 0 src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guillaumearm/redux-getters.git"
+  },
+  "keywords": [
+    "redux",
+    "getters",
+    "store enhancer"
+  ],
+  "maintainers": [
+    {
+      "name": "Guillaume Arm",
+      "email": "garm@student.42.fr"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guillaumearm/redux-getters/issues"
+  },
+  "homepage": "https://github.com/guillaumearm/redux-getters",
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "testPathDirs": [
+      "src"
+    ]
+  },
+  "dependencies": {
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.14.0",
+    "babel-eslint": "^6.1.2",
+    "babel-jest": "^15.0.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-es2015-modules-umd": "^6.12.0",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.14.0",
+    "eslint": "^3.5.0",
+    "eslint-plugin-import": "^1.14.0",
+    "jest": "^15.1.1",
+    "ramda": "^0.22.1",
+    "rimraf": "^2.5.4",
+    "shelljs": "^0.7.4"
+  }
+}
