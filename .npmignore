@@ -4,5 +4,7 @@ CONTRIBUTING.md
 webpack.config.js
 scripts
 *.spec.js
+*.test.js
+__tests__
 coverage
 src
