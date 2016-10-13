@@ -23,12 +23,7 @@
     "getters",
     "store enhancer"
   ],
-  "maintainers": [
-    {
-      "name": "Guillaume Arm",
-      "email": "garm@student.42.fr"
-    }
-  ],
+  "author": "Guillaume ARM <garm@student.42.fr>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/guillaumearm/redux-getters/issues"
