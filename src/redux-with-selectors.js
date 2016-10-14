@@ -3,7 +3,7 @@ const isFunction = is('function');
 const isObject = is('object');
 
 const withSelectors = selectors => store => {
-  if (!isObject(selectors)) throw (new Error('redux-getters : selectors must be a plain object.'));
+  if (!isObject(selectors)) throw (new Error('redux-with-selectors : selectors must be a plain object.'));
   return {
     ...store,
     getState: (selectorKey, ...additionalParameters) => {

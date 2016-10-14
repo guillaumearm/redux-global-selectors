@@ -1,4 +1,4 @@
-# redux-getters
+# redux-with-selectors
 
 a redux store enhancer for adding selectors inside the store.
 
@@ -11,7 +11,7 @@ this will allow you to centralize all your selectors in the redux store, and cal
 
 ## Installation
 ```
-npm install --save guillaumearm/redux-getters
+npm install --save guillaumearm/redux-with-selectors
 ```
 (not published yet)
 
@@ -21,7 +21,7 @@ npm install --save guillaumearm/redux-getters
 
 ```js
 import { createStore } from 'redux';
-import withSelectors from 'redux-getters';
+import withSelectors from 'redux-with-selectors';
 import rootReducer from './reducers';
 
 const selectors = {
@@ -36,7 +36,7 @@ const store = createStore(rootReducer, initialState, withSelectors(selectors));
 ```js
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import withSelectors from 'redux-getters';
+import withSelectors from 'redux-with-selectors';
 import rootReducer from './reducers';
 import * as selectors from './selectors';
 
@@ -69,8 +69,8 @@ const value = getDummy(store.getState());
 ```
 
 ## using [React](https://facebook.github.io/react/)
-(coming soon in a `react-redux-with-selectors`).
+(coming soon in `react-redux-with-selectors`).
 
 ## Contributing
 If you like this module, you're welcome for contributing,
-take a look at [CONTRIBUTING.md](https://github.com/guillaumearm/redux-getters/blob/master/CONTRIBUTING.md)
+take a look at [CONTRIBUTING.md](https://github.com/guillaumearm/redux-with-selectors/blob/master/CONTRIBUTING.md)
