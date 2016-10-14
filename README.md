@@ -61,7 +61,7 @@ if you inverse __compose__ arguments, the __getState__ given to your thunks will
 you can use reselect with __redux-with-selectors__, but not with selector factory.
 you should do something like this:
 ```js
-// creat store, enhance it, etc...
+// create store, enhance it, etc...
 // [...]
 import { makeGetDummy } from './selectors/factories/dummy';
 const getDummy = makeGetDummy();
