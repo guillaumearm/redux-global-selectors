@@ -21,7 +21,7 @@ npm install --save guillaumearm/redux-with-selectors
 
 ```js
 import { createStore } from 'redux';
-import withSelectors from 'redux-with-selectors';
+import { withSelectors } from 'redux-with-selectors';
 import rootReducer from './reducers';
 
 const selectors = {
@@ -36,7 +36,7 @@ const store = createStore(rootReducer, initialState, withSelectors(selectors));
 ```js
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import withSelectors from 'redux-with-selectors';
+import { withSelectors } from 'redux-with-selectors';
 import rootReducer from './reducers';
 import * as selectors from './selectors';
 
