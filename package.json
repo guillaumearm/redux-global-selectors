@@ -1,8 +1,8 @@
 {
-  "name": "redux-getters",
+  "name": "redux-with-selectors",
   "version": "0.1.0",
   "description": "a redux store enhancer for adding selectors in the store.",
-  "main": "./dist/redux-getters.js",
+  "main": "./dist/redux-with-selectors.js",
   "scripts": {
     "build": "babel src --out-dir dist --ignore '*.spec.js'",
     "clean": "rimraf ./dist",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/guillaumearm/redux-getters.git"
+    "url": "https://github.com/guillaumearm/redux-with-selectors.git"
   },
   "keywords": [
     "redux",
@@ -26,17 +26,15 @@
   "author": "Guillaume ARM <garm@student.42.fr>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/guillaumearm/redux-getters/issues"
+    "url": "https://github.com/guillaumearm/redux-with-selectors/issues"
   },
-  "homepage": "https://github.com/guillaumearm/redux-getters",
+  "homepage": "https://github.com/guillaumearm/redux-with-selectors",
   "jest": {
     "moduleFileExtensions": [
       "js"
     ]
   },
-  "dependencies": {
-    "redux": "^3.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.14.0",
@@ -53,7 +51,12 @@
     "eslint-plugin-import": "^1.14.0",
     "jest": "^15.1.1",
     "ramda": "^0.22.1",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
     "rimraf": "^2.5.4",
     "shelljs": "^0.7.4"
+  },
+  "peerDependencies": {
+    "redux": "^3.6.0"
   }
 }
