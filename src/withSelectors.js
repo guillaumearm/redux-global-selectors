@@ -1,7 +1,4 @@
-const is = type => x => typeof x === type;
-const isString = is('string');
-const isFunction = is('function');
-const isObject = is('object');
+import { isString, isObject, isFunction } from './private';
 
 const MUST_BE_AN_OBJECT = 'redux-with-selectors : selectors must be a plain object.';
 const MUST_BE_A_STRING = 'redux-with-selectors : selectorKeys must be a string.';
