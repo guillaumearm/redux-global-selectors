@@ -28,7 +28,6 @@
     "templateStrings": true,
     "unicodeCodePointEscapes": true,
     "globalReturn": true,
-    "jsx": true
   },
   "globals": {
     "afterEach": false,
@@ -41,14 +40,10 @@
     "global": false,
     "require": false,
     "expect": false,
-    "should": false,
-    "chai": false,
-    "sinon": false,
-    "Power2": false,
-    "Sine": false,
     "__DEVELOPMENT__": false
   },
   "rules": {
+    "no-undef": ["error"],
     "max-len": ["error", 100, { "ignoreComments": true }],
     "comma-dangle": ["warn", "always-multiline"], // disallow or enforce trailing commas
     "curly": ["warn", "multi-or-nest"], // specify curly brace conventions for all control statements
