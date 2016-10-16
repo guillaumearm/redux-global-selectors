@@ -19,6 +19,7 @@ export const withSelectors = selectors => {
       getState: (selectorKey, ...additionalParameters) => {
         const state = store.getState();
         const selector = selectors[selectorKey];
+        if (isFunction(selectorKey)) return selectorKey(state, ...additionalParameters);
         if (selectorKey && !selector) return undefined;
         return selector ? selector(state, ...additionalParameters) : state;
       },

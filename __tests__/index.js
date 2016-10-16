@@ -1,3 +1,4 @@
+import { prop } from 'ramda';
 import { withSelectors } from 'src/redux-with-selectors'
 
 describe('redux-with-selectors', () => {
@@ -22,6 +23,10 @@ describe('redux-with-selectors', () => {
 
       it('returns undefined', () => {
         expect(getState('fullName')).toBe('Bruce Wayne');
+      });
+
+      it('returns the firstName when passing a selector to getState()', () => {
+        expect(getState(prop('firstName'))).toBe(state.firstName);
       });
     });
 
