@@ -54,18 +54,23 @@ if you inverse __compose__ arguments, the __getState__ given to your thunks will
 ##### getState :: (selectorKey, ...additionalParameters) -> selectedValue
 - call the corresponding selector given to __withSelectors__
 
+##### getState :: (selector, ...additionalParameters) -> selectedValue
+- call the first parameter as a selector, very useful for using with selector factory.
+
 ##### getState :: () -> state
 - traditional getState()
 
 ## using [reselect](https://github.com/reactjs/reselect)
-you can use reselect with __redux-with-selectors__, but not with selector factory.
+you can use __redux-with-selectors__ with __reselect__.
+
+but if you want to use it with selectors factories,
 you should do something like this:
 ```js
 // create store, enhance it, etc...
 // [...]
 import { makeGetDummy } from './selectors/factories/dummy';
 const getDummy = makeGetDummy();
-const value = getDummy(store.getState());
+const value = store.getState(getDummy);
 ```
 
 ## using [React](https://facebook.github.io/react/)
