@@ -5,9 +5,12 @@ a redux store enhancer for adding selectors inside the store.
 
 provide a `withSelectors` function that take a schema of your selectors, a store and return a new enhanced store.
 
-this will allow you to centralize all your selectors in the redux store, and call them by using `getState()`
-
-
+this will allow you to centralize all your selectors in the redux store, and call them by using
+```js
+store.getState('yourSelector');
+// or
+store.getState(state => state.value);
+```
 
 ## Installation
 ```
