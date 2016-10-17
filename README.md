@@ -57,8 +57,15 @@ if you inverse __compose__ arguments, the __getState__ given to your thunks will
 ##### getState :: (selectorKey, ...additionalParameters) -> selectedValue
 - call the corresponding selector given to __withSelectors__
 
+```js
+    store.getState('fullName'); // => will call the 'fullName' selector, given to the store.
+```
+
 ##### getState :: (selector, ...additionalParameters) -> selectedValue
 - call the first parameter as a selector, very useful for using with selector factory.
+```js
+store.getState(state => state.firstName); // => will call this selector
+```
 
 ##### getState :: () -> state
 - traditional getState()
