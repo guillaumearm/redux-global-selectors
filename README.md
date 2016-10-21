@@ -1,6 +1,6 @@
 # redux-with-selectors
 
-a redux store enhancer for adding selectors inside the store.
+a redux store enhancer adding selectors inside the store.
 
 
 provide a `withSelectors` function that take a schema of your selectors, a store and return a new enhanced store.
