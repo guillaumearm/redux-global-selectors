@@ -1,4 +1,4 @@
-import { isObject, isFunction } from './private';
+import { isObject, isFunction } from './internal';
 
 const MUST_BE_AN_OBJECT = 'redux-with-selectors : selectors must be a plain object.';
 const MUST_BE_A_FUNC = 'redux-with-selectors : a selector must be a function.';
