@@ -8,7 +8,10 @@ describe('redux-with-selectors', () => {
     const store = {
       getState: () => state,
     };
-    const selectors = { fullName: ({ firstName, lastName }) => `${firstName} ${lastName}` }
+    const selectors = {
+      fullName: ({ firstName, lastName }) => `${firstName} ${lastName}`,
+      some: { nested: { selectors: { yolo: () => true } } },
+    }
     const enhancedStore = withSelectors(selectors)(store);
 
     describe('getState', () => {
@@ -27,6 +30,10 @@ describe('redux-with-selectors', () => {
 
       it('returns the firstName when passing a selector to getState()', () => {
         expect(getState(prop('firstName'))).toBe(state.firstName);
+      });
+
+      it('can access to a nested property', () => {
+        expect(getState('some.nested.selectors.yolo')).toBe(true);
       });
     });
 
