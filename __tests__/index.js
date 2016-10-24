@@ -4,7 +4,7 @@ import { withSelectors } from 'src/redux-with-selectors'
 describe('redux-with-selectors', () => {
   describe('withSelectors', () => {
 
-    const state = { firstName: 'Bruce', lastName: 'Wayne' }
+    const state = { firstName: 'Bruce', lastName: 'Wayne' };
     const store = {
       getState: () => state,
     };
@@ -17,11 +17,11 @@ describe('redux-with-selectors', () => {
         expect(getState()).toEqual(state);
       });
 
-      it('returns the fullName', () => {
+      it('returns undefined', () => {
         expect(getState('unknown selectors')).toBe(undefined);
       });
 
-      it('returns undefined', () => {
+      it('returns the fullName', () => {
         expect(getState('fullName')).toBe('Bruce Wayne');
       });
 
