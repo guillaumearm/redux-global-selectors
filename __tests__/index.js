@@ -4,11 +4,14 @@ import { withSelectors } from 'src/redux-with-selectors'
 describe('redux-with-selectors', () => {
   describe('withSelectors', () => {
 
-    const state = { firstName: 'Bruce', lastName: 'Wayne' }
+    const state = { firstName: 'Bruce', lastName: 'Wayne' };
     const store = {
       getState: () => state,
     };
-    const selectors = { fullName: ({ firstName, lastName }) => `${firstName} ${lastName}` }
+    const selectors = {
+      fullName: ({ firstName, lastName }) => `${firstName} ${lastName}`,
+      some: { nested: { selectors: { yolo: () => true } } },
+    }
     const enhancedStore = withSelectors(selectors)(store);
 
     describe('getState', () => {
@@ -17,16 +20,20 @@ describe('redux-with-selectors', () => {
         expect(getState()).toEqual(state);
       });
 
-      it('returns the fullName', () => {
+      it('returns undefined', () => {
         expect(getState('unknown selectors')).toBe(undefined);
       });
 
-      it('returns undefined', () => {
+      it('returns the fullName', () => {
         expect(getState('fullName')).toBe('Bruce Wayne');
       });
 
       it('returns the firstName when passing a selector to getState()', () => {
         expect(getState(prop('firstName'))).toBe(state.firstName);
+      });
+
+      it('can access to a nested property', () => {
+        expect(getState('some.nested.selectors.yolo')).toBe(true);
       });
     });
 
