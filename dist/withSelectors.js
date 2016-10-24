@@ -16,13 +16,18 @@ var error = function error(msg) {
 };
 
 var checkSelectors = function checkSelectors(s) {
-  if (!(0, _internal.isObject)(s)) error(MUST_BE_AN_OBJECT);
   Object.values(s).forEach(function (selector) {
     if (!(0, _internal.isFunction)(selector)) error(MUST_BE_A_FUNC);
   });
 };
 
-var withSelectors = exports.withSelectors = function withSelectors(selectors) {
+var checkNestedSelectors = function checkNestedSelectors(s) {
+  if (!(0, _internal.isObject)(s)) error(MUST_BE_AN_OBJECT);
+};
+
+var withSelectors = exports.withSelectors = function withSelectors(nestedSelectors) {
+  checkNestedSelectors(nestedSelectors);
+  var selectors = (0, _internal.flattenObject)(nestedSelectors);
   checkSelectors(selectors);
   return function (store) {
     return _extends({}, store, {
