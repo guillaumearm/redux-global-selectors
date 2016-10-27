@@ -35,6 +35,14 @@ describe('redux-with-selectors', () => {
       it('can access to a nested property', () => {
         expect(getState('some.nested.selectors.yolo')).toBe(true);
       });
+
+      it('returns undefined when a propery is unknow', () => {
+        expect(getState('unknow')).toBe(undefined);
+      });
+
+      it('returns undefined when a nested propery is unknow', () => {
+        expect(getState('some.unknow.nested.selectors.yolo')).toBe(undefined);
+      });
     });
 
     describe('errors', () => {
