@@ -70,6 +70,16 @@ store.getState(state => state.firstName); // => will call this selector
 ##### getState :: () -> state
 - traditional getState()
 
+## nested selectors
+you can nest your selectors and call them with `store.getState('my.nested.selector')`
+
+example of nested selector :
+```js
+const selectors = {
+    my: { nested: { selector: state => state } },
+};
+```
+
 ## using [reselect](https://github.com/reactjs/reselect)
 you can use __redux-with-selectors__ with __reselect__.
 
@@ -84,7 +94,7 @@ const value = store.getState(getDummy);
 ```
 
 ## using [React](https://facebook.github.io/react/)
-(coming soon in `react-redux-with-selectors`).
+(coming soon with `react-redux-with-selectors`).
 
 ## Contributing
 If you like this module, you're welcome for contributing,
