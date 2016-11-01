@@ -1,6 +1,6 @@
 {
   "name": "redux-with-selectors",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "a redux store enhancer for adding selectors in the store.",
   "main": "./dist/redux-with-selectors.js",
   "scripts": {
