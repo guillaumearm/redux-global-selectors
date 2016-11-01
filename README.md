@@ -94,7 +94,7 @@ const value = store.getState(getDummy);
 ```
 
 ## using [React](https://facebook.github.io/react/)
-(coming soon with `react-redux-with-selectors`).
+Please see [react-redux-with-selectors](https://github.com/guillaumearm/react-redux-with-selectors).
 
 ## Contributing
 If you like this module, you're welcome for contributing,
