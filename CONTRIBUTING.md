@@ -1,10 +1,5 @@
 # Contributing
 
-[react-redux-global-selectors](https://github.com/guillaumearm/react-redux-global-selectors) use [redux-global-selectors](https://github.com/guillaumearm/redux-global-selectors) as main dependency, so we work on a [dev branch](https://github.com/guillaumearm/redux-global-selectors/tree/dev) for staging and need to follow this __3 principles__ :
-- this branch must be as clean as master, so `npm run prepublish` must be ok.
-- all master merges should be tagged by a new version. (on the master branch only)
-- all change must be validated by [react-redux-global-selectors](https://github.com/guillaumearm/react-redux-global-selectors) unit testing before merge on master
-
 --------------
 
 1.  Fork the project and clone your fork.
@@ -25,7 +20,7 @@
 
         $ git push origin <branch>
 
-6.  Open a pull request on [dev](https://github.com/guillaumearm/redux-global-selectors/tree/dev) branch.
+6.  Open a pull request on [master](https://github.com/guillaumearm/redux-global-selectors/tree/master) branch.
 
 ----------------
 
