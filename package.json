@@ -1,6 +1,6 @@
 {
   "name": "redux-global-selectors",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "a redux store enhancer for adding selectors in the store.",
   "main": "./dist/redux-global-selectors.js",
   "scripts": {
