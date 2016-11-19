@@ -21,8 +21,10 @@
   },
   "keywords": [
     "redux",
+    "selectors"
     "getters",
-    "store enhancer"
+    "store",
+    "enhancer"
   ],
   "author": "Guillaume ARM <garm@student.42.fr>",
   "license": "MIT",

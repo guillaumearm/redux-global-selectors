@@ -94,7 +94,7 @@ const value = store.getState(getDummy);
 ```
 
 ## using [React](https://facebook.github.io/react/)
-Please see [react-redux-global-selectors](https://github.com/guillaumearm/react-redux-global-selectors).
+Please see [react-redux-global-selectors](https://github.com/guillaumearm/redux-global-selectors/tree/master/packages/react-redux-global-selectors).
 
 ## Contributing
 If you like this module, you're welcome for contributing,
