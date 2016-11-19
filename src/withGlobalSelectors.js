@@ -14,7 +14,7 @@ const checkNestedSelectors = s => {
   if (!isObject(s)) error(MUST_BE_AN_OBJECT);
 };
 
-export const withSelectors = nestedSelectors => {
+export const withGlobalSelectors = nestedSelectors => {
   checkNestedSelectors(nestedSelectors);
   const selectors = flattenObject(nestedSelectors);
   checkSelectors(selectors)
