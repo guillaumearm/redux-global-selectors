@@ -1,4 +1,4 @@
-# redux-with-selectors
+# redux-global-selectors
 
 a redux store enhancer adding selectors inside the store.
 
@@ -14,7 +14,7 @@ store.getState(state => state.value);
 
 ## Installation
 ```
-npm install --save guillaumearm/redux-with-selectors
+npm install --save guillaumearm/redux-global-selectors
 ```
 (not published yet)
 
@@ -24,7 +24,7 @@ npm install --save guillaumearm/redux-with-selectors
 
 ```js
 import { createStore } from 'redux';
-import { withSelectors } from 'redux-with-selectors';
+import { withSelectors } from 'redux-global-selectors';
 import rootReducer from './reducers';
 
 const selectors = {
@@ -39,7 +39,7 @@ const store = createStore(rootReducer, initialState, withSelectors(selectors));
 ```js
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import { withSelectors } from 'redux-with-selectors';
+import { withSelectors } from 'redux-global-selectors';
 import rootReducer from './reducers';
 import * as selectors from './selectors';
 
@@ -81,7 +81,7 @@ const selectors = {
 ```
 
 ## using [reselect](https://github.com/reactjs/reselect)
-you can use __redux-with-selectors__ with __reselect__.
+you can use __redux-global-selectors__ with __reselect__.
 
 but if you want to use it with selectors factories,
 you should do something like this:
@@ -94,8 +94,8 @@ const value = store.getState(getDummy);
 ```
 
 ## using [React](https://facebook.github.io/react/)
-Please see [react-redux-with-selectors](https://github.com/guillaumearm/react-redux-with-selectors).
+Please see [react-redux-global-selectors](https://github.com/guillaumearm/react-redux-global-selectors).
 
 ## Contributing
 If you like this module, you're welcome for contributing,
-take a look at [CONTRIBUTING.md](https://github.com/guillaumearm/redux-with-selectors/blob/master/CONTRIBUTING.md)
+take a look at [CONTRIBUTING.md](https://github.com/guillaumearm/redux-global-selectors/blob/master/CONTRIBUTING.md)

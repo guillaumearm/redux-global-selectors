@@ -1,7 +1,7 @@
 import { prop } from 'ramda';
-import { withSelectors } from 'src/redux-with-selectors'
+import { withSelectors } from 'src/redux-global-selectors'
 
-describe('redux-with-selectors', () => {
+describe('redux-global-selectors', () => {
   describe('withSelectors', () => {
 
     const state = { firstName: 'Bruce', lastName: 'Wayne' };
