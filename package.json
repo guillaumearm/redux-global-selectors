@@ -13,8 +13,7 @@
     "test:watch": "jest --watch --coverage",
     "preversion": "npm run -s test:all",
     "prepare": "npm run -s test:all",
-    "lint": "eslint --max-warnings 0 src",
-    "postinstall": "if [ -z \"$npm_config_production\" ]; then cd packages/react-redux-global-selectors && npm i ; cd - ; fi"
+    "lint": "eslint --max-warnings 0 src"
   },
   "repository": {
     "type": "git",
