@@ -35,6 +35,11 @@
   "jest": {
     "moduleFileExtensions": [
       "js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/build/",
+      "/packages/"
     ]
   },
   "dependencies": {},
