@@ -1,5 +1,5 @@
 import { prop } from 'ramda';
-import { withGlobalSelectors } from 'src/redux-global-selectors'
+import { withGlobalSelectors } from '../src'
 
 describe('redux-global-selectors', () => {
   describe('withGlobalSelectors', () => {
